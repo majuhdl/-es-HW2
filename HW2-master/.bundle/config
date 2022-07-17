@@ -1,0 +1,2 @@
+---
+BUNDLE_WITHOUT: "production:sqlite3-1.3.6:sqlite2-1.3.6"
