@@ -922,3 +922,1015 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:53:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  Rendered movies/index.html.haml within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - @all_ratings.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___4206292288284635203_12100'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___4206292288284635203_12100'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.3ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:54:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  Rendered movies/index.html.haml within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::All_ratings):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - All_ratings.all.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___2055433488593912151_12100'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___2055433488593912151_12100'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:54:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (244.7ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `all_ratings' for #<#<Class:0x0000563a5abdb150>:0x0000563a5a803aa0>):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - all_ratings.all.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___4179937738498186543_12100'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___4179937738498186543_12100'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:55:09 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (195.3ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `all_ratings' for #<#<Class:0x0000563a5abdb150>:0x0000563a5c3771b0>):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - all_ratings.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___4179937738498186543_12760'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___4179937738498186543_12760'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.1ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:55:12 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (126.1ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `all_ratings' for #<#<Class:0x0000563a5abdb150>:0x00007febe16d6eb8>):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - all_ratings.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___4179937738498186543_13320'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___4179937738498186543_13320'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:55:31 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  Rendered movies/index.html.haml within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - @all_ratings.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml___4179937738498186543_13860'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml___4179937738498186543_13860'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:56:42 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `all_ratings' for #<MoviesController:0x0000563a5c39bc90>):
+  
+app/controllers/movies_controller.rb:6:in `index'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.3ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 09:59:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  Rendering movies/index.html.haml within layouts/application
+  Rendered movies/index.html.haml within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: %h1 All Movies
+    3: = form_tag movies_path, :method => :get do
+    4:   Include:
+    5:   - @all_ratings.each do |rating|
+    6:     = rating
+    7:     = check_box_tag "ratings[#{rating}]"
+    8:   = submit_tag 'Refresh'
+  
+app/views/movies/index.html.haml:5:in `block in _app_views_movies_index_html_haml__4222302898477526231_12100'
+app/views/movies/index.html.haml:3:in `_app_views_movies_index_html_haml__4222302898477526231_12100'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.8ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 10:02:28 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 186ms (Views: 178.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 10:02:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 226ms (Views: 207.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 10:02:53 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 10:02:55 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 10:02:58 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:20:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 284ms (Views: 255.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:20:27 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:20:30 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:20:32 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 277ms (Views: 268.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:24 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (20.2ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:26 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:28 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:32 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:21:34 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:22:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (28.5ms)
+Completed 200 OK in 336ms (Views: 298.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:22:36 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:23:04 -0300
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:23:14 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (42.1ms)
+Completed 200 OK in 80ms (Views: 64.1ms | ActiveRecord: 3.9ms)
+
+
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 78ms (Views: 60.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:24:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 278ms (Views: 269.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:24:03 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:24:05 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:24:06 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:10 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:13 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:15 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:18 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG'[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:21 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 34ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:26 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:29 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:24:33 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13')[0m
+  Rendered movies/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:24:35 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:25:00 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:25:00 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 60ms (Views: 49.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:25:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 290ms (Views: 276.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2022-07-17 14:32:34 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:32:35 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 51ms (Views: 40.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:40:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/controllers/movies_controller.rb:8: else without rescue is useless
+    else 
+    ^~~~
+/home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/controllers/movies_controller.rb:56: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/movies_controller.rb:8: else without rescue is useless
+app/controllers/movies_controller.rb:56: syntax error, unexpected `end', expecting end-of-input
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.8ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:40:33 -0300
+  
+SyntaxError (/home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/controllers/movies_controller.rb:8: else without rescue is useless
+    else 
+    ^~~~
+/home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/controllers/movies_controller.rb:56: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/movies_controller.rb:8: else without rescue is useless
+app/controllers/movies_controller.rb:56: syntax error, unexpected `end', expecting end-of-input
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.1ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:40:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 343ms (Views: 320.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:41:01 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:41:03 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2022-07-17 14:41:04 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 67ms (Views: 60.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:41:06 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (36.7ms)
+Completed 200 OK in 127ms (Views: 121.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:44:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (30.4ms)
+Completed 200 OK in 290ms (Views: 274.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:44:15 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 70ms (Views: 61.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:44:18 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `elseif' for #<MoviesController:0x00007fc2d000ab78>
+Did you mean?  elsif):
+  
+app/controllers/movies_controller.rb:7:in `index'
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/majuhdl/.rvm/gems/ruby-2.7.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.9ms)
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:44:32 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:45:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (30.4ms)
+Completed 200 OK in 568ms (Views: 537.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:45:11 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:45:14 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:45:16 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 72ms (Views: 60.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:45:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 337ms (Views: 311.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:46:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 310ms (Views: 296.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:46:18 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 58ms (Views: 52.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-07-17 14:46:24 -0300
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:46:24 -0300
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:46:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 290ms (Views: 276.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:46:54 -0300
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 73ms (Views: 60.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:46:57 -0300
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (25.9ms)
+Completed 200 OK in 60ms (Views: 53.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:48:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (37.2ms)
+Completed 200 OK in 364ms (Views: 351.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:12 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 41ms (Views: 33.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:14 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:17 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:19 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 67ms (Views: 54.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:20 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&commit=Refresh" for 127.0.0.1 at 2022-07-17 14:48:21 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'[0m
+  Rendered movies/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2022-07-17 14:49:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 308ms (Views: 285.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:49:30 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2022-07-17 14:49:32 -0300
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from all_ratings at /home/majuhdl/Documents/es/HW2/es-HW2/HW2-master/app/models/movie.rb:7)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendering movies/index.html.haml within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 44ms (Views: 36.9ms | ActiveRecord: 1.2ms)
+
+
